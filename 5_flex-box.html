@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Exemplo Didático de Flexbox</title>
+    <style>
+        /* 1. Primeiro, criamos um "contêiner" que irá guardar nossos itens. */
+        .container-flex {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 2px solid #ccc;
+            height: 200px; /* Altura definida para vermos o alinhamento vertical */
+
+            /* 2. A "mágica" começa aqui! Tornamos o contêiner flexível. */
+
+            display: flex;
+            flex-direction: row;
+
+            /* 3. Agora podemos controlar o alinhamento dos itens no eixo principal (horizontal). */
+            /* - flex-start: (padrão) Alinha no início. */
+            /* - flex-end: Alinha no fim. */
+            /* - center: Alinha no centro. */
+            /* - space-between: Espaço igual entre os itens. */
+            /* - space-around: Espaço ao redor de cada item. */
+
+            justify-content: center;
+
+            /* 4. E também podemos controlar o alinhamento no eixo transversal (vertical). */
+            /* - flex-start: Alinha no topo. */
+            /* - flex-end: Alinha na base. */
+            /* - center: Alinha no meio (verticalmente). */
+            
+            align-items: center;
+        }
+
+        /* 5. Estilizando os "itens" que estão dentro do nosso contêiner. */
+        .item-flex {
+            width: 50px;
+            height: 25px;
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-flex">
+        <div class="item-flex">Item 1</div>
+        <div class="item-flex">Item 2</div>
+        <div class="item-flex">Item 3</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo Grid</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Container principal vira um grid */
+    .container {
+      display: grid;
+
+        /* Divisão das colunas (uma com 200px fixa e 2 com restante da tela)*/
+      grid-template-columns: 200px  1fr 1fr;
+
+      grid-template-rows: 60px 1fr 40px;
+
+      grid-template-areas: 
+      "header header header"
+      "sidebar main main"
+      "footer footer footer";
+
+      height: 100vh;
+    }
+
+    /* Continuar 1ª digitação (Aqui) */
+    
+
+    /* Cabeçalho ocupa a área "header" */
+    header {
+      grid-area: header;
+      background: #4CAF50;
+      color: white;
+      display: flex;         /* centraliza verticalmente o texto */
+      align-items: center;
+      padding: 0 1em;
+    }
+
+    /* Menu lateral ocupa a área "sidebar" */
+    aside {
+      grid-area: sidebar;
+      background: #f2f2f2;
+      padding: 1em;
+    }
+
+    /* Conteúdo principal na área "main" */
+    main {
+      grid-area: main;
+      background: #fff;
+      padding: 1em;
+    }
+
+    /* Rodapé ocupa a área "footer" */
+    footer {
+      grid-area: footer;
+      background: #ddd;
+      text-align: center;
+      line-height: 40px; /* centraliza verticalmente o texto */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>Cabeçalho</header>
+    <aside>Menu lateral</aside>
+    <main>Conteúdo principal</main>
+    <footer>Rodapé</footer>
+  </div>
+</body>
+</html>

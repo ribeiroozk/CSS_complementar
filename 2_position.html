@@ -1,0 +1,106 @@
+!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Exemplo Avançado de CSS Position</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            height: 200vh; /* Altura para garantir a rolagem */
+            margin: 0; /* Remove margens padrão do body */
+        }
+
+        /* POSITION: STICKY (O Cabeçalho "Grudento") */
+        /* Ocupa 100% da largura e se comporta como um header. */
+        /* Ele rola com a página até seu topo atingir o topo da tela, então ele "gruda". */
+        .header-sticky {
+            width: 100%;
+            background-color: #ffc107;
+            color: #000;
+            padding: 15px;
+            text-align: center;
+            box-sizing: border-box;
+            font-size: 1.2em;
+            position: sticky;
+            top: 0;
+            z-index: 9;
+        }
+
+
+
+        /* A área de conteúdo principal para dar espaço */
+        .content {
+            padding: 20px;
+        }
+
+        /* POSITION: RELATIVE (A Área de Referência) */
+        /* Criamos uma área maior para servir de referência visual clara */
+        /* para o seu filho com position: absolute. */
+        .container-relative {
+            background-color: #007bff;
+            width: 100%;
+            color: #fff;
+            height: 300px;
+            margin: 40px auto; /*Centraliza na horizaontal */
+            padding: 10px;
+            position: relative;
+       }
+
+
+        /* POSITION: ABSOLUTE (O Ícone no Canto) */
+        /* Posiciona-se em relação ao container-relative, seu pai posicionado. */
+        .item-absoluto {
+            background-color: #dc3545;
+            width: 300px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px; /* Centralizado da vertical */
+            position: absolute;
+            /* bottom: 10px; */
+            /* right: 10px; */
+
+
+            /* centralizado */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+
+        /* POSITION: FIXED (O Botão "Sempre Visível") */
+        /* Fica fixo na tela, ignorando a rolagem. Ideal para um chat ou "voltar ao topo". */
+
+
+        .botao-fixo {
+            background-color: #28a745;
+            color: #fff;
+            padding: 15px;
+            border-radius: 50%;
+            position: fixed;
+            top: 50px;
+            right: 50px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="header-sticky">CABEÇALHO STICKY</div>
+
+    <div class="content">
+        <h1>Exemplo de CSS Position</h1>
+        <p>Role a página para baixo. Veja como o cabeçalho amarelo "gruda" no topo!</p>
+
+        <div class="container-relative">
+            Container (Relative)
+            <div class="item-absoluto">
+                Item (Absolute)
+            </div>
+        </div>
+    </div>
+
+    <div class="botao-fixo">Fixo</div>
+
+</body>

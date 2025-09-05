@@ -1,0 +1,31 @@
+<head>
+    <title>Exemplo de Box Model</title>
+    <style>
+        .caixa-box-model {
+            /* 1. Conteúdo: a largura e altura do conteúdo em si. */
+            width: 300px;
+            background-color: #007bff; /* Cor do conteúdo */
+            color: white;
+
+            /* Isso faz a largura (width) incluir padding e border sem alterar o tamanho inicial */
+            box-sizing: border-box;
+
+            padding: 20px;
+            border: 5px solid #000;
+            margin: 30px;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="caixa-box-model">
+        Este é o meu conteúdo (Content). <br>
+        O espaço entre este texto e a borda azul escura é o Padding. <br>
+        A linha azul escura é a Border. <br>
+        O espaço fora de tudo isso é a Margin.
+    </div>
+</body>

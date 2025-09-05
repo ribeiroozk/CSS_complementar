@@ -1,0 +1,36 @@
+<head>
+    <title>Exemplo de Media Query com Flexbox</title>
+    <style>
+        .container-responsivo {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .item-responsivo {
+            background-color: #ffc107;
+            padding: 20px;
+            text-align: center;
+            flex: 1; /* Divide iguamente o espaço */
+        }
+        /* Responsividade */
+        @media (max-width: 768px){
+            .container-responsivo {
+                flex-direction: column;
+                align-items: center;
+            }
+
+                .item-responsivo {
+                    width: 100%;
+                }
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Redimensione a janela do navegador!</h2>
+    <div class="container-responsivo">
+        <div class="item-responsivo">Item 1</div>
+        <div class="item-responsivo">Item 2</div>
+        <div class="item-responsivo">Item 3</div>
+    </div>
+</body>

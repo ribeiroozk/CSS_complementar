@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Unidades CSS Simplificado</title>
+    <style>
+        /* 1. Configuração base (importante para REM) */
+        html {
+            font-size: 16px; /* Padrão: 1rem = 16px */
+        }
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        /* Estilo comum para todas as caixas de exemplo */
+        .box {
+            padding: 15px;
+            margin: 15px auto;
+            border: 1px solid #ccc;
+        }
+
+        /* Caixa "Pai" para demonstrar unidades relativas a ele (em, %) */
+        .container-pai {
+            font-size: 20px; /* 'em' e '%' usarão este como base */
+            width: 80%;
+            border: 2px dashed blue;
+            background-color: #f0f0f0;
+        }
+
+        /* --- UNIDADES EM AÇÃO --- */
+
+        /* px (Absoluta): Tamanho fixo, não muda. */
+        .unidade-px {
+            font-size: 16px;
+            background-color: #ffdddd;
+        }
+
+        /* em (Relativa ao pai): 1.5 * 20px (do pai) = 30px */
+        .unidade-em {
+            font-size: 1.5em;
+            background-color: #fff8dd;
+        }
+        
+        /* rem (Relativa à raiz): 1.5 * 16px (do html) = 24px */
+        .unidade-rem {
+            font-size: 1.5rem;
+            background-color: #ddf4ff;
+        }
+
+        /* % (Relativa ao pai): 50% da largura do container-pai. */
+        .unidade-percent {
+            width: 50%;
+            background-color: #e9e9e9;
+        }
+
+        /* vw (Relativa à viewport): 50% da largura da janela. */
+          .unidade-vw {
+            width: 50vw;
+            background-color: #d4f8f2;
+        }
+
+        /* vh (Relativa à viewport): 50% da altura da janela. */
+        .unidade-vh {
+            height: 50vh;
+            background-color: #dcedc8;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Unidades CSS</h1>
+
+    <div class="box container-pai">
+        <b>Pai</b> (width: 80%, font-size: 20px)
+
+        <div class="box unidade-px"><b>16px</b> (Fixo)</div>
+        <div class="box unidade-em"><b>1.5em</b> (Relativo ao pai)</div>
+        <div class="box unidade-rem"><b>1.5rem</b> (Relativo à raiz)</div>
+        <div class="box unidade-percent"><b>width: 50%</b> (Relativo ao pai)</div>
+    </div>
+    
+    <div class="box unidade-vw"><b>width: 50vw</b> (Metade da largura da janela)</div>
+    <div class="box unidade-vh"><b>height: 50vh</b> (Metade da altura da janela)</div>
+
+</body>
+</html>

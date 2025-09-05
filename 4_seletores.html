@@ -1,0 +1,26 @@
+<head>
+    <title>Exemplo de Especificidade</title>
+    <style>
+        /* Regra 1: Seletor de TAG (Especificidade = 1 ponto) */
+        p {
+            color: blue;
+        }
+
+        /* Regra 2: Seletor de CLASSE (Especificidade = 10 pontos) */
+        .texto-importante {
+            color: green
+        }
+
+        /* Regra 3: Seletor de ID (Especificidade = 100 pontos) */
+        #paragrafo-unico {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <p class="texto-importante" id="paragrafo-unico">
+        Qual cor eu terei? Minha cor final será VERMELHA, 
+        pois o seletor de ID (#) é o mais específico (tem mais pontos).
+    </p>
+</body>
